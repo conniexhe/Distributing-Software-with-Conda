@@ -14573,7 +14573,7 @@ find . -maxdepth 1 -type f -delete
 <h3 id="Uploading-Packages">Uploading Packages<a class="anchor-link" href="#Uploading-Packages">&#182;</a></h3><p>If you are using Miniconda, you will need to <code>conda install anaconda-client</code> in order to upload packages and environments to Anaconda Cloud. Otherwise, if you are using Anaconda, Anaconda Client is one of the 1,500 preinstalled packages/applications.</p>
 <h4 id="Uploading-to-your-personal-Anaconda-profile">Uploading to your personal Anaconda profile<a class="anchor-link" href="#Uploading-to-your-personal-Anaconda-profile">&#182;</a></h4><p><code>anaconda upload PACKAGE</code> will upload the specified package. Anaconda will prompt you to enter your login details:</p>
 <p><img src="images/anaconda-upload-login.jpg" alt="anaconda upload login"></p>
-<p>After logging in, the upload will complete and be available at <a href="https://anaconda.org/USERNAME/PACKAGE">https://anaconda.org/USERNAME/PACKAGE</a>.</p>
+<p>After logging in, the upload will complete and be available at <a href="https://anaconda.org/USERNAME/PACKAGE">https://anaconda.org/USERNAME/PACKAGE</a> for install using <code>conda install -c USERNAME PACKAGE</code>.</p>
 <p><img src="images/anaconda-upload.jpg" alt="anaconda upload"></p>
 <p>If logged in on anaconda.org, you can edit the description and adjust the settings at <a href="https://anaconda.org/USERNAME/PACKAGE">https://anaconda.org/USERNAME/PACKAGE</a>.</p>
 <p><img src="images/anaconda-package.jpg" alt="anaconda package"></p>
@@ -14581,7 +14581,7 @@ find . -maxdepth 1 -type f -delete
 <p><img src="images/anaconda-uploaded.jpg" alt="anaconda uploaded"></p>
 <h4 id="Uploading-to-an-organization">Uploading to an organization<a class="anchor-link" href="#Uploading-to-an-organization">&#182;</a></h4><p><code>anaconda upload --user ORGANIZATION PACKAGE</code> will upload the specified package to the specified organization's channel. If you are not already logged in, Anaconda will prompt you to enter your login details:</p>
 <p><img src="images/anaconda-org-upload-login.jpg" alt="anaconda upload login"></p>
-<p>Similar to uploading to your personal channel, after logging in, the upload will complete and be available at <a href="https://anaconda.org/ORGANIZATION/PACKAGE">https://anaconda.org/ORGANIZATION/PACKAGE</a>. If logged in on anaconda.org, you can edit the description and adjust the settings of the package. The newly uploaded package will also be visible on the organization dashboard.</p>
+<p>Similar to uploading to your personal channel, after logging in, the upload will complete and be available at <a href="https://anaconda.org/ORGANIZATION/PACKAGE">https://anaconda.org/ORGANIZATION/PACKAGE</a> for install using <code>conda install -c ORGANIZATION PACKAGE</code>. If logged in on anaconda.org, you can edit the description and adjust the settings of the package. The newly uploaded package will also be visible on the organization dashboard.</p>
 
 </div>
 </div>
