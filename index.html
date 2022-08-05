@@ -13973,7 +13973,8 @@ a.anchor-link {
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h1>Distributing Software with <img src="https://miro.medium.com/max/1400/1*_QBvDsMNDkZBt32BE9zENQ.png" alt="conda logo" width="120"></h1>
 <p>Connie He<br>
-CoBRA Lab<br>
+University of Victoria<br>
+<a href="https://onlineacademiccommunity.uvic.ca/cobra">COBRA Lab</a><br>
 July 2022</p>
 <h2 id="Table-of-Contents">Table of Contents<a class="anchor-link" href="#Table-of-Contents">&#182;</a></h2><p><a href="#Introduction">Introduction</a></p>
 <p><a href="#Getting-Started">Getting Started</a></p>
@@ -14126,8 +14127,27 @@ July 2022</p>
 </ul>
 </li>
 </ul>
+<p><a href="#Conda-in-COBRA">Conda in COBRA</a></p>
+<ul>
+<li><p><a href="#COBRA&#39;s-Channel">COBRA's Channel</a></p>
+</li>
+<li><p><a href="#COBRA-Packages">COBRA Packages</a></p>
+<ul>
+<li><p><a href="#DinoKnot">DinoKnot</a></p>
+</li>
+<li><p><a href="#HFold">HFold</a></p>
+</li>
+<li><p><a href="#Iterative-HFold">Iterative-HFold</a></p>
+</li>
+<li><p><a href="#KnotAli">KnotAli</a></p>
+</li>
+<li><p><a href="#Knotty">Knotty</a></p>
+</li>
+</ul>
+</li>
+</ul>
 <h2 id="Introduction">Introduction<a class="anchor-link" href="#Introduction">&#182;</a></h2><p>Conda is a cross platform package, dependency, and environment management system distributes software of all languages. With conda, you can find, install, run and update packages and their dependencies. You can also create, save, load and switch between environments on your local computer.</p>
-<p>There are many benefits of using conda in the CoBRA lab. Although our programs are available on GitHub to be installed and compiled, this process can be troublesome for those with little insight on or little experience with installing and compiling source code. Our current processes this may work for our team and those in an interdisciplinary research field such as bioinformatics but may pose barriers for scholars and researchers from other fields who wish to use our programs. By packaging our programs with conda, we can expand our reach beyond our community with quick and easy-to-install packages while improving our own experience within the team. Moreover, the packaging process is simple and easy to learn.</p>
+<p>There are many benefits of using conda in the COBRA lab. Although our programs are available on GitHub to be installed and compiled, this process can be troublesome for those with little insight on or little experience with installing and compiling source code. Our current processes this may work for our team and those in an interdisciplinary research field such as bioinformatics but may pose barriers for scholars and researchers from other fields who wish to use our programs. By packaging our programs with conda, we can expand our reach beyond our community with quick and easy-to-install packages while improving our own experience within the team. Moreover, the packaging process is simple and easy to learn.</p>
 <p>In summary, conda...</p>
 <ul>
 <li>Increases accessibility for anyone hoping to use our programs</li>
@@ -14464,7 +14484,7 @@ about:
 <img src="images/conda-convert-success.jpg" alt="conda convert appears successful"></p>
 <p>However, after <a href="#Uploading-Packages">uploading the package</a> and attempting to install on macOS 64-bit:
 <img src="images/conda-convert-fail.jpg" alt="conda convert fail"></p>
-<h3 id="Building-a-C++-Package:-HFold">Building a C++ Package: HFold<a class="anchor-link" href="#Building-a-C++-Package:-HFold">&#182;</a></h3><p>This tutorial builds a package for HFold, one of the methods from the CoBRA Lab, from a <a href="https://github.com/HosnaJabbari/HFold">git repository</a>. This tutorial is intended to be a reference point for packaging the methods (written in C++) from our lab. As these methods are only compatible with Linux and macOS, this tutorial will only demonstrate the packaging process with bash commands.</p>
+<h3 id="Building-a-C++-Package:-HFold">Building a C++ Package: HFold<a class="anchor-link" href="#Building-a-C++-Package:-HFold">&#182;</a></h3><p>This tutorial builds a package for HFold, one of the methods from the COBRA Lab, from a <a href="https://github.com/HosnaJabbari/HFold">git repository</a>. This tutorial is intended to be a reference point for packaging the methods (written in C++) from our lab. As these methods are only compatible with Linux and macOS, this tutorial will only demonstrate the packaging process with bash commands.</p>
 <h4 id="Before-you-package">Before you package<a class="anchor-link" href="#Before-you-package">&#182;</a></h4><p>Before packaging, ensure you have access to either a Linux or macOS machine. If your computer operates on Windows, you will need to install a virtual machine.</p>
 <h5 id="Installing-a-virtual-machine">Installing a virtual machine<a class="anchor-link" href="#Installing-a-virtual-machine">&#182;</a></h5><p>The following steps for installing a virtual machine uses VirtualBox and Vagrant and is one of many other methods that can be found online.</p>
 <p>Storage requirements: at least 30GB for macOS and 10GB for ubuntu bionic.</p>
@@ -14582,6 +14602,101 @@ find . -maxdepth 1 -type f -delete
 <h4 id="Uploading-to-an-organization">Uploading to an organization<a class="anchor-link" href="#Uploading-to-an-organization">&#182;</a></h4><p><code>anaconda upload --user ORGANIZATION PACKAGE</code> will upload the specified package to the specified organization's channel. If you are not already logged in, Anaconda will prompt you to enter your login details:</p>
 <p><img src="images/anaconda-org-upload-login.jpg" alt="anaconda upload login"></p>
 <p>Similar to uploading to your personal channel, after logging in, the upload will complete and be available at <a href="https://anaconda.org/ORGANIZATION/PACKAGE">https://anaconda.org/ORGANIZATION/PACKAGE</a> for install using <code>conda install -c ORGANIZATION PACKAGE</code>. If logged in on anaconda.org, you can edit the description and adjust the settings of the package. The newly uploaded package will also be visible on the organization dashboard.</p>
+<h2 id="Conda-in-COBRA">Conda in COBRA<a class="anchor-link" href="#Conda-in-COBRA">&#182;</a></h2><h3 id="Anaconda-Organization">Anaconda Organization<a class="anchor-link" href="#Anaconda-Organization">&#182;</a></h3><p>The UVic COBRA organization is named uvic-cobra and can be found at <a href="https://anaconda.org/uvic-cobra">https://anaconda.org/uvic-cobra</a>. There, a list of our packages can be found. In the future, if we upload environments in addition to packages, a list of those will be included on our Anaconda organization website.</p>
+<p>For upload access, please first create an account at anaconda.org then email me at conniexhe@uvic.ca with your Anaconda account username.</p>
+<h3 id="COBRA-Packages">COBRA Packages<a class="anchor-link" href="#COBRA-Packages">&#182;</a></h3><p>Our packages are available for install through the channel <code>uvic-cobra</code>. To view a list of all packages in available through our channel, use the command <code>conda search --override-channels -c uvic-cobra '*'</code> in the terminal.</p>
+<p>As part of my 2022 summer research project with the lab, we currently have 5 packages available for install:</p>
+<ul>
+<li><p>DinoKnot</p>
+</li>
+<li><p>HFold</p>
+</li>
+<li><p>Iterative-HFold</p>
+</li>
+<li><p>KnotAli</p>
+</li>
+<li><p>Knotty</p>
+</li>
+</ul>
+<h4 id="DinoKnot">DinoKnot<a class="anchor-link" href="#DinoKnot">&#182;</a></h4><p><em>Supported platforms</em>:</p>
+<ul>
+<li><p>Linux</p>
+</li>
+<li><p>macOS</p>
+</li>
+</ul>
+<p><em>Install</em>:</p>
+<p>In the terminal, enter and run:</p>
+<ol>
+<li><code>conda --version</code> to verify you have conda installed.</li>
+<li><code>conda install -c uvic-cobra dinoknot</code>.</li>
+</ol>
+<p><em>Usage</em>:</p>
+<p>DinoKnot can be called from anywhere. Enter <code>DinoKnot_multimodel</code> in the terminal to view its usage, or read the README.md available at the <a href="https://github.com/HosnaJabbari/DinoKnot">DinoKnot GitHub repository</a>.</p>
+<p><em>Removal</em>:</p>
+<p>In the terminal, enter and run <code>conda remove dinoknot</code>.</p>
+<h4 id="HFold">HFold<a class="anchor-link" href="#HFold">&#182;</a></h4><p><em>Supported platforms</em>:</p>
+<ul>
+<li><p>Linux</p>
+</li>
+<li><p>macOS</p>
+</li>
+</ul>
+<p><em>Install</em>:</p>
+<p>In the terminal, enter and run:</p>
+<ol>
+<li><code>conda --version</code> to verify you have conda installed.</li>
+<li><code>conda install -c uvic-cobra hfold</code>.</li>
+</ol>
+<p><em>Usage</em>:</p>
+<p>HFold can be called from anywhere. Enter <code>HFold</code> in the terminal to view its usage, or read the README.md available at the <a href="https://github.com/HosnaJabbari/HFold">HFold GitHub repository</a>.</p>
+<p><em>Removal</em>:</p>
+<p>In the terminal, enter and run <code>conda remove hfold</code>.</p>
+<h4 id="Iterative-HFold">Iterative-HFold<a class="anchor-link" href="#Iterative-HFold">&#182;</a></h4><p><em>Supported platforms</em>:</p>
+<ul>
+<li><p>Linux</p>
+</li>
+<li><p>macOS</p>
+</li>
+</ul>
+<p><em>Install</em>:</p>
+<p>In the terminal, enter and run:</p>
+<ol>
+<li><code>conda --version</code> to verify you have conda installed.</li>
+<li><code>conda install -c uvic-cobra iterative-hfold</code>.</li>
+</ol>
+<p><em>Usage</em>:</p>
+<p>Iterative-HFold can be called from anywhere. Enter <code>Iterative-HFold</code> in the terminal to view its usage, or read the README.md available at the <a href="https://github.com/HosnaJabbari/Iterative-HFold">Iterative-HFold GitHub repository</a>.</p>
+<p><em>Removal</em>:</p>
+<p>In the terminal, enter and run <code>conda remove iterative-hfold</code>.</p>
+<h4 id="KnotAli">KnotAli<a class="anchor-link" href="#KnotAli">&#182;</a></h4><p><em>Supported platforms</em>:</p>
+<ul>
+<li>Linux</li>
+</ul>
+<p><em>Install</em>:</p>
+<p>In the terminal, enter and run:</p>
+<ol>
+<li><code>conda --version</code> to verify you have conda installed.</li>
+<li><code>conda install -c uvic-cobra knotali</code>.</li>
+</ol>
+<p><em>Usage</em>:</p>
+<p>KnotAli can be called from anywhere. Enter <code>KnotAli -h</code> in the terminal to view its usage, or read the README.md available at the <a href="https://github.com/HosnaJabbari/KnotAli">KnotAli GitHub repository</a>.</p>
+<p><em>Removal</em>:</p>
+<p>In the terminal, enter and run <code>conda remove knotali</code>.</p>
+<h4 id="Knotty">Knotty<a class="anchor-link" href="#Knotty">&#182;</a></h4><p><em>Supported platforms</em>:</p>
+<ul>
+<li>Linux</li>
+</ul>
+<p><em>Install</em>:</p>
+<p>In the terminal, enter and run:</p>
+<ol>
+<li><code>conda --version</code> to verify you have conda installed.</li>
+<li><code>conda install -c uvic-cobra knotty</code>.</li>
+</ol>
+<p><em>Usage</em>:</p>
+<p>Knotty can be called from anywhere. Enter <code>knotty</code> in the terminal to view its usage, or read the README.md available at the <a href="https://github.com/HosnaJabbari/knotty">Knotty GitHub repository</a>.</p>
+<p><em>Removal</em>:</p>
+<p>In the terminal, enter and run <code>conda remove knotty</code>.</p>
 
 </div>
 </div>
